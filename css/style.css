@@ -1,0 +1,25 @@
+/* Color the h1 element blue */
+@font-face {
+    font-family: MyFont;
+    src: url('fonts/binalFont.ttf');
+}
+
+h1{
+    color:rgb(177, 59, 0);
+    background-color: rgba(255, 232, 112, 0.6);
+    font-family: Arial !important; /* !important is used to override the default font */
+}
+
+h2{
+    color:rgb(0, 94, 23);
+    background-color: rgba(187, 190, 4, 0.6);
+    font-family: MyFont !important; /* !important is used to override the default font */
+    line-height: 100%;
+}
+
+body{
+    background-color: rgb(187, 41, 41);
+    font-family: Arial;
+    font-size: 20px;
+    line-height: 150%;
+}
