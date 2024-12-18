@@ -1,25 +1,180 @@
 /* Color the h1 element blue */
-@font-face {
-    font-family: MyFont;
-    src: url('fonts/binalFont.ttf');
+article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{
+    display:block
 }
 
-h1{
-    color:rgb(177, 59, 0);
-    background-color: rgba(255, 232, 112, 0.6);
-    font-family: Arial !important; /* !important is used to override the default font */
+summary{
+    display:list-item
 }
 
-h2{
-    color:rgb(0, 94, 23);
-    background-color: rgba(187, 190, 4, 0.6);
-    font-family: MyFont !important; /* !important is used to override the default font */
-    line-height: 100%;
+a{
+    background-color:transparent
 }
 
-body{
-    background-color: rgb(187, 41, 41);
-    font-family: Arial;
-    font-size: 20px;
-    line-height: 150%;
+a:active,a:hover{
+    outline-width:10px
+}
+
+body,h1,h2,h3,h4,h5,h6 {
+    font-family: "Lato", sans-serif;
+}
+
+body, html {
+    height: 100%;
+    color: #777777;
+    line-height: 1.8;
+    
+}
+
+.w3-top,.w3-bottom{
+    position:fixed;
+    width:100%;
+    z-index:1
+}
+
+
+.navbar{
+    width:100%;
+    overflow:hidden;
+    background-color:#ffffff!important;
+    color:#000000!important;
+    display: inline-flex;
+    justify-content:center;
+}
+
+.center-align{
+    text-align:center!important
+}
+
+.center-align .navbar{
+    display:inline-block;
+    width:auto
+}
+
+.bgimg-1 {
+    background-image: url('/images/bg_spaceship.jpg');
+    min-height: 50%;
+    background-color: #095283;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .button{
+    white-space:normal
+}
+
+.navbar .current {
+    background-color: rgb(76, 230, 230);
+  }
+
+.navbar .navbar-item{
+    padding:8px 100px;
+    float:left;
+    width:auto;
+    border:none;
+    display:block;
+    outline:0;
+    text-decoration: none;
+    color: #000000;
+}
+
+.web-content{
+    margin-left:auto;
+    margin-right:auto;
+    max-width:980px
+}
+
+.p-content{
+    text-align: justify;
+}
+
+.col,.col-third{
+    float:left;
+    width:100%
+}
+
+.col-third{
+    width:33.33333%;
+    text-align:justify;
+    padding: 10px;
+}
+
+.col-quarter{
+    width:25%;
+    text-align:justify;
+    display: inline-block;
+    justify-content: center;
+}
+
+.zoom {
+    <!-- padding: 50px; -->
+    background-color: red;
+    transition: transform .2s;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    
+  }
+  
+.zoom:hover {
+-ms-transform: scale(1.1); /* IE 9 */
+-webkit-transform: scale(1.1); /* Safari 3-8 */
+transform: scale(1.1); 
+}
+
+
+.img-grid {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-gap: 50px;
+    padding-left: 10px;
+    justify-content: space-evenly;
+    row-gap: 20px;
+    
+}
+
+.display-middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.hidden_main{
+    position: absolute;
+    left: -1000px;
+}
+
+.hidden_main:focus {
+    position: static;
+    left: 0;
+}
+
+.img-grid img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 5px solid #d41414;
+    padding: 10px;
+}   
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    flex-flow: row wrap;
+}
+
+.flex-container img{
+    border: 5px solid rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.flex-container :nth-child(2n) {
+    border: 5px solid rgb(255, 0, 0);
+    padding: 10px;
+    border-radius: 20px;
 }
