@@ -178,3 +178,20 @@ transform: scale(1.1);
     padding: 10px;
     border-radius: 20px;
 }
+
+
+#imageDisplay{
+    line-height:450px;
+	width: 600px;
+    height: 450px;
+	border:5px solid black;
+	margin:0 auto;
+    background-color: #cbbaff;
+    background-image: url('');
+    background-repeat: no-repeat;
+    color:#FFFFFF;
+    text-align: center;
+    background-size: 100%;
+    margin-bottom:25px;
+    font-size: 150%;
+}
