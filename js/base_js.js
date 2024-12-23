@@ -3,8 +3,8 @@
 // let userName=prompt("What is your name?")
 // document.write("Hello "+userName+", welcome to my website")
 
-function myFunction() {
-    alert("Hello! "+userName);
+function myFunction(userName) {
+    alert("Hello! "+userName+", welcome to my website");
     document.getElementById("name-heading").innerHTML = userName
 }
 
