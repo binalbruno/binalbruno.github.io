@@ -3,6 +3,7 @@
 // let userName=prompt("What is your name?")
 // document.write("Hello "+userName+", welcome to my website")
 
+
 function myFunction(userName) {
     alert("Hello! "+userName+", welcome to my website");
     document.getElementById("name-heading").innerHTML = userName
@@ -28,4 +29,19 @@ function upDate(previewPic){
 function unDo(){
     document.getElementById('imageDisplay').style.backgroundImage = "url('')";
     document.getElementById('imageDisplay').innerHTML = "Hover over an image below to display here.";
+}
+
+function selectImages(){
+    imagesList = ["3dprinting.jpg", "boardgame.jpg", "cooking.jpg", "gaming.png", "garden.jpg", "motorcycle.jpg", "reading.jpg", "seashells.jpg", "stamps.jpg"];
+
+    currentImages = document.querySelectorAll(".flex-container img");
+    console.log(currentImages)
+    for (var i = 0; i < currentImages.length; i++) {
+        console.log(currentImages[i].src)
+        randomImage = "../images/hobbies/"+imagesList[Math.floor(Math.random() * imagesList.length)];
+        console.log(randomImage)
+        currentImages[i].src = randomImage;
+        currentImages[i].alt = randomImage.split('/').pop().split('.')[0];
+        currentImages[i].tabIndex = 0;
+    }
 }
