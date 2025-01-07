@@ -1,0 +1,69 @@
+
+:root {
+    --tangelo: rgba(251, 80, 18, 1);
+    --rich-black: rgba(13, 19, 33, 1);
+    --periwinkle: rgba(174, 184, 254, 1);
+    --ivory: rgba(244, 249, 233, 1);
+    --prussian-blue: rgba(29, 45, 68, 1);
+}
+
+.customnav{
+    background-color: var(--prussian-blue) !important;
+    color: var(--ivory);
+}
+
+.navbar a{
+    color: var(--ivory);
+}
+
+.navbar a:hover{
+    color: var(--periwinkle);
+}
+
+.navbaractive{
+    color: var(--tangelo) !important;
+}
+
+.navbar-toggler{
+    background-color: var(--tangelo);
+}
+
+.img-fluid{
+    width: 100%;
+    max-height: 50vh;
+    object-fit: cover;
+}
+
+.logo-image{
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-img{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.title-card{
+    color: var(--tangelo);
+    position: absolute; 
+    top: 20%; 
+    width: 100%;
+    opacity:1;
+    font-size: 4rem;
+    text-align: center;
+}
+
+@media screen and (min-width: 772px) {
+    .title-card{
+        font-size: 6rem;
+    }
+    
+}
+
+.container p a{
+    color: var(--tangelo);
+    text-decoration: none;
+}
