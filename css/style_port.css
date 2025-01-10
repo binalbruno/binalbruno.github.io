@@ -44,21 +44,23 @@
 .header-img{
     display: flex;
     justify-content: flex-end;
+    background-color: var(--periwinkle);
 }
 
 .title-card{
     color: var(--tangelo);
     position: absolute; 
-    top: 20%; 
+    top: 20vh; 
     width: 100%;
     opacity:1;
-    font-size: 3rem;
+    font-size: 10vh;
     text-align: center;
+    text-shadow: 4px 4px 4px var(--prussian-blue);
 }
 
-@media screen and (min-width: 772px) {
+@media screen and (min-width: 500px) {
     .title-card{
-        font-size: 6rem;
+        font-size: 10vh;
     }
     
 }
@@ -67,3 +69,63 @@
     color: var(--tangelo);
     text-decoration: none;
 }
+
+.img-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 5rem;
+    flex-direction: row;
+}
+
+.img-grid p{
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 4rem;
+    min-width: 300px;
+}
+
+.img-grid img{
+    background-color: var(--ivory);
+    min-width: 100px;
+    max-width: 300px;
+    max-height: 80px;
+}
+
+.zoom {
+    transition: transform .2s;
+    margin: 0 auto;
+  }
+  
+.zoom:hover {
+-ms-transform: scale(1.1); /* IE 9 */
+-webkit-transform: scale(1.1); /* Safari 3-8 */
+transform: scale(1.1); 
+}
+
+.covers>figure {
+    position: relative;
+    width:auto;
+  }
+  
+  .covers>figure>figcaption {
+    display:none;
+  }
+  
+  .covers figure:hover > figcaption {
+    display: inline-block;
+    font-size: 0.8rem;
+    width: 100%;
+    position: absolute;
+    right: 0px;
+    bottom: -10px;
+    background-color: var(--rich-black);
+    color: rgb(255, 255, 255);
+    border-radius: 3px;
+    padding: 0px;
+  }
+  
+  .covers figure {
+    min-height: 100px;
+  }
