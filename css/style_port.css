@@ -12,6 +12,13 @@
     color: var(--ivory);
 }
 
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
 .navbar a{
     color: var(--ivory);
 }
@@ -43,24 +50,23 @@
 
 .header-img{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
     background-color: var(--periwinkle);
 }
 
-.title-card{
+.header-img>h1{
     color: var(--tangelo);
     position: absolute; 
-    top: 20vh; 
-    width: 100%;
     opacity:1;
-    font-size: 10vh;
     text-align: center;
     text-shadow: 4px 4px 4px var(--prussian-blue);
+    font-size: 3rem;
 }
 
 @media screen and (min-width: 500px) {
-    .title-card{
-        font-size: 10vh;
+    .header-img>h1{
+        font-size: 5rem;
     }
     
 }
@@ -96,7 +102,7 @@
 .zoom {
     transition: transform .2s;
     margin: 0 auto;
-  }
+}
   
 .zoom:hover {
 -ms-transform: scale(1.1); /* IE 9 */
@@ -107,25 +113,80 @@ transform: scale(1.1);
 .covers>figure {
     position: relative;
     width:auto;
-  }
+}
   
-  .covers>figure>figcaption {
-    display:none;
-  }
-  
-  .covers figure:hover > figcaption {
-    display: inline-block;
-    font-size: 0.8rem;
-    width: 100%;
-    position: absolute;
-    right: 0px;
-    bottom: -10px;
-    background-color: var(--rich-black);
-    color: rgb(255, 255, 255);
-    border-radius: 3px;
-    padding: 0px;
-  }
-  
-  .covers figure {
-    min-height: 100px;
-  }
+.covers>figure>figcaption {
+display:none;
+}
+
+.covers figure:hover > figcaption {
+display: flex;
+font-size: 0.8rem;
+width: 100%;
+position: absolute;
+background-color: var(--rich-black);
+color: var(--ivory);
+border-radius: 3px;
+padding: 0px;
+top:80%;
+bottom: -20%;
+text-align: center;
+justify-content: center;
+}
+
+.covers figure {
+min-height: 100px;
+}
+
+.grid-1-2span{
+    display: grid;
+    row-gap: 1rem;
+    justify-content: center;
+}
+
+.grid-1-2span img {
+    background-color: var(--ivory);
+}
+
+.grid-1-2span>figure:nth-child(2n) {
+    justify-self: end;
+}
+.grid-1-2span>figcaption:nth-child(odd) {
+    text-align: right;
+}
+
+@media screen and (min-width: 720px) {
+    .grid-1-2span{
+        display: grid;
+        grid-template-columns: .5fr 2fr .5fr;
+        row-gap: 1rem;
+        column-gap: 1rem;
+    }
+    
+    .grid-1-2span>figcaption {
+        grid-column: span 2;
+    }
+
+    .grid-1-2span img{
+        width: 300px;
+        height: auto;
+    };
+    
+}
+
+ 
+footer {
+background-color: var(--prussian-blue);
+padding: 25px;
+color: var(--tangelo);
+display: flex;
+justify-content: space-around;
+}
+
+footer a{
+    color: var(--tangelo);
+}
+
+.profile-pic{
+    text-align: center;
+}
