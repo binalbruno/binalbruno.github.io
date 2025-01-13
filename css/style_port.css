@@ -24,6 +24,7 @@
 
 .navbaractive{
     color: var(--tangelo) !important;
+    font-weight: bold;
 }
 
 .navbar-toggler{
