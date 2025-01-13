@@ -12,12 +12,7 @@
     color: var(--ivory);
 }
 
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
+
 
 .navbar a{
     color: var(--ivory);
